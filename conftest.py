@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 @pytest.fixture(scope="session", autouse=False)
-def app(request):
+def browser(request):
     global fixture
     options = Options()
     user_language = request.config.getoption('--language')
